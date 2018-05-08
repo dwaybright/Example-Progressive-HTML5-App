@@ -65,7 +65,7 @@ var database = (function() {
 		database.close();
 	};
 	
-	_DatabaseModule.putObject = function(objectStoreName, object) {
+	_DatabaseModule.putObject = function(objectStoreName, object, callback) {
 		console.log("IndexedDB - Put object into '" + objectStoreName + "' ...");
 		
 		var transaction = database.transaction(objectStoreName, "readwrite");
@@ -84,12 +84,15 @@ var database = (function() {
 		
 		request.onsuccess = function(event) {
 			object.id = event.target.result;
+			callback(object);
 			console.log("IndexedDB - Succesfully put object id: " + object.id + " into objectStore: " + objectStoreName);
 		};
 		
 		request.onerror = function(event) {
 			console.error("IndexedDB - Failed to add object to " + objectStoreName, event.target.error);
 		};
+		
+		
 	};
 	
 	_DatabaseModule.deleteKey = function(objectStoreName, objectKey) {
