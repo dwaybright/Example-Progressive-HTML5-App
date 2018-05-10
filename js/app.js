@@ -5,19 +5,20 @@ $(document).ready(function () {
 
     $('.hiddenDivs').hide();
 
-    $('#addButton').click(addHiddenDiv);
+    $('#addButton').click(addCopyOfHiddenDiv);
 });
 
-function addHiddenDiv() {
+function addCopyOfHiddenDiv() {
     var text = {
         value: "",
         firstValue: "",
         secondValue: ""
     };
-    database.putObject(DB_OBJECT_STORE_TEST, text, finishAddHiddenDiv);
+
+    database.putObject(DB_OBJECT_STORE_TEST, text, finishAddCopyOfHiddenDiv);
 }
 
-function finishAddHiddenDiv(text) {
+function finishAddCopyOfHiddenDiv(text) {
     var hiddenElement = $('#hiddenAddMe');
 
     var copy = $(hiddenElement).clone().show();
