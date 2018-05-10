@@ -43,15 +43,11 @@ function updateText(target) {
 	var text1 = $(container).find('.firstValue');
 	var text2 = $(container).find('.secondValue');
 	
-	var value1 = $(text1)[0].value;
-	var value2 = $(text2)[0].value;
-	var val = value1 + " : " + value2;
-	
 	var text = {
-		value: val,
-		firstValue: value1,
-		secondValue: value2, 
-		id: parseInt($(container)[0].id, 10) 
+		value: $(text1)[0].value + " : " + $(text2)[0].value,
+		firstValue: $(text1)[0].value,
+		secondValue: $(text2)[0].value, 
+		id: $(container)[0].id
 	};
 	
 	database.putObject(DB_OBJECT_STORE_TEST, text, function() {});
