@@ -18,6 +18,7 @@ This project uses IndexedDB to store/retrieve persistent client data.
 
 Can open index.html with Chrome/Firefox.
 
+
 ## Cached Basic IndexedDB Example
 
 This project uses a Service Worker (which itself uses Promises and Cache) to cache the website.  Upgrading requires the browser to be closed and reopened.
