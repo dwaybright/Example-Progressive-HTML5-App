@@ -11,6 +11,7 @@ This project uses IndexedDB to store/retrieve persistent client data.
 * Chrome v38+
 * Firefox v37+
 * Edge v12+
+* IE 11
 
 * IndexedDB - https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 
