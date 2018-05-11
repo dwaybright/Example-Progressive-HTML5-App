@@ -38,7 +38,8 @@ function AddObjectToDOM(text) {
 
     $(copy)[0].id = text.id;
 
-    $(copy).find('.accordion').accordion({
+    var accordion = $(copy).find('.accordion');
+    $(accordion).accordion({
         heightStyle: "content",
         collapsible: true
     });
