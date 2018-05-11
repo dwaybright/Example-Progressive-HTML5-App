@@ -8,9 +8,9 @@ This project uses IndexedDB to store/retrieve persistent client data.
 
 ### Requirements
 
-Chrome v46+
-Firefox v44+
-Edge v17+
+* Chrome v38+
+* Firefox v37+
+* Edge v12+
 
 * IndexedDB - https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 
@@ -24,9 +24,9 @@ This project uses a Service Worker (which itself uses Promises and Cache) to cac
 
 ### Requirements
 
-Chrome v46+
-Firefox v44+
-Edge v17+
+* Chrome v46+
+* Firefox v44+
+* Edge v17+
 
 * Service Worker - https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
 * Promises - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
@@ -45,5 +45,5 @@ On Windows, you can use Cygwin with Python installed.
 
 I heavily leaned on the following resources while putting these together:
 
-https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
-https://github.com/mdn/sw-test/
+* https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
+* https://github.com/mdn/sw-test/
