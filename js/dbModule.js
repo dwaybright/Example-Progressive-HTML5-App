@@ -12,8 +12,10 @@ var database = (function () {
 
     /**
      * Opens the IndexedDB database with name DB_NAME
+     * 
+     * @callback callback
      */
-    _DatabaseModule.open = function () {
+    _DatabaseModule.open = function (callback) {
         console.log("IndexedDB - Opening database '" + DB_NAME + "' ...");
 
         var openRequest = window.indexedDB.open(DB_NAME, DB_VERSION);
@@ -46,6 +48,8 @@ var database = (function () {
             console.log("IndexedDB - Successfully opened database");
 
             database = event.target.result;
+
+            callback();
 
             database.onerror = function (event) {
                 alert("IndexedDB error: " + event.target.error.code);
@@ -163,7 +167,7 @@ var database = (function () {
     }
 
     /**
-     * Puts an object into given Object Store, tagging field DB_KEYPATH_FIELD with issued ID number. 
+     * Puts an object into given Object Store.  Callback function returns the saved object with DB_KEYPATH_FIELD set with issued ID.
      * 
      * @param {string} objectStoreName 
      * @param {Object} object 
@@ -195,8 +199,11 @@ var database = (function () {
         var request = objectStore.put(object);
 
         request.onsuccess = function (event) {
-            object.id = event.target.result;
-            callback(object);
+            if (callback) {
+                object.id = event.target.result;
+                callback(object);
+            }
+
             console.log("IndexedDB - Succesfully put object id: " + object.id + " into objectStore: " + objectStoreName);
         };
 
