@@ -1,4 +1,25 @@
 $(document).ready(function () {
+    if ('Promise' in window &&
+        'serviceWorker' in navigator &&
+        'caches' in window) {
+
+        navigator.serviceWorker.register('/cached_basic_indexedDB/cacheServiceWorker.js', {
+            scope: '/cached_basic_indexedDB/'
+        }).then(function (reg) {
+            if (reg.installing) {
+                console.debug('Cache Service Worker - Installing');
+            } else if (reg.waiting) {
+                console.debug('Cache Service Worker - Installed');
+            } else if (reg.active) {
+                console.debug('Cache Service Worker - Active');
+            }
+        }).catch(function (error) {
+            console.error('Cache Service Worker - Registration failed with ', error);
+        });
+    } else {
+        alert("You will be unable to run in Offline mode.");
+    }
+
     if (window.indexedDB) {
         database.open(databaseReady);
     }
