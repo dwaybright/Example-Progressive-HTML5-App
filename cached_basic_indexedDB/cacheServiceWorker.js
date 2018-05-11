@@ -1,10 +1,11 @@
-var CACHE_NAME = 'cacheV7';
+var CACHE_NAME = 'cacheV1';
 
 var CACHE_URLS = [
     '/cached_basic_indexedDB/index.html',
     '/cached_basic_indexedDB/js/',
     '/cached_basic_indexedDB/js/app.js',
     '/cached_basic_indexedDB/js/dbModule.js',
+    '/cached_basic_indexedDB/js/polyfillNumber.js',
     '/cached_basic_indexedDB/js/jquery-3.3.1.min.js',
     '/cached_basic_indexedDB/js/jquery-ui-1.12.1.min.js',
     '/cached_basic_indexedDB/css/',
