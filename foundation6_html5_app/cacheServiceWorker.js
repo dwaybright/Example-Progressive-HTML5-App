@@ -5,56 +5,20 @@ var ROOT_PATH = '/foundation6_html5_app/';
 var CACHE_URLS = [
     ROOT_PATH + 'index.html',
 
-    ROOT_PATH + 'img/',
-
-    ROOT_PATH + 'img/overlays/',
-    ROOT_PATH + 'img/overlays/01.png',
-    ROOT_PATH + 'img/overlays/02.png',
-    ROOT_PATH + 'img/overlays/03.png',
-    ROOT_PATH + 'img/overlays/04.png',
-    ROOT_PATH + 'img/overlays/05.png',
-    ROOT_PATH + 'img/overlays/06.png',
-    ROOT_PATH + 'img/overlays/07.png',
-    ROOT_PATH + 'img/overlays/08.png',
-    ROOT_PATH + 'img/overlays/09.png',
-
-    ROOT_PATH + 'img/svg/',
-    ROOT_PATH + 'img/svg/arrow_left.svg',
-    ROOT_PATH + 'img/svg/arrow_right.svg',
-
-
     ROOT_PATH + 'css/',
-    ROOT_PATH + 'css/bootstrap.css',
-    ROOT_PATH + 'css/jquery-ui.min.css',
-    ROOT_PATH + 'css/jquery-ui.structure.min.css',
-    ROOT_PATH + 'css/jquery-ui.theme.min.css',
-    ROOT_PATH + 'css/mdb.css',
+    ROOT_PATH + 'css/foundation.css',
     ROOT_PATH + 'css/style.css',
-
-    ROOT_PATH + 'css/images/',
-    ROOT_PATH + 'css/images/notonline.png',
-    ROOT_PATH + 'css/images/ui-bg_glass_25_cb842e_1x400.png',
-    ROOT_PATH + 'css/images/ui-bg_glass_70_ede4d4_1x400.png',
-    ROOT_PATH + 'css/images/ui-bg_glass_100_f5f0e5_1x400.png',
-    ROOT_PATH + 'css/images/ui-bg_highlight-hard_65_fee4bd_1x100.png',
-    ROOT_PATH + 'css/images/ui-bg_highlight-hard_75_f5f5b5_1x100.png',
-    ROOT_PATH + 'css/images/ui-bg_highlight-hard_100_f4f0ec_1x100.png',
-    ROOT_PATH + 'css/images/ui-bg_inset-soft_100_f4f0ec_1x100.png',
-    ROOT_PATH + 'css/images/ui-icons_c47a23_256x240.png',
-    ROOT_PATH + 'css/images/ui-icons_cb672b_256x240.png',
-    ROOT_PATH + 'css/images/ui-icons_f35f07_256x240.png',
-    ROOT_PATH + 'css/images/ui-icons_f08000_256x240.png',
-    ROOT_PATH + 'css/images/ui-icons_ff7519_256x240.png',
-    ROOT_PATH + 'css/images/ui-icons_ffffff_256x240.png',
 
     ROOT_PATH + 'js/',
     ROOT_PATH + 'js/app.js',
-    ROOT_PATH + 'js/bootstrap.js',
     ROOT_PATH + 'js/dbModule.js',
     ROOT_PATH + 'js/jquery-3.3.1.min.js',
-    ROOT_PATH + 'js/jquery-ui-1.12.1.min.js',
-    ROOT_PATH + 'js/mdb.js',
-    ROOT_PATH + 'js/popper.min.js',
+    ROOT_PATH + 'js/sizzle.min.js',
+    ROOT_PATH + 'js/sizzle.min.map',
+
+    ROOT_PATH + 'js/foundation/',
+    ROOT_PATH + 'js/foundation/foundation.js',
+    ROOT_PATH + 'js/foundation/what-input.js',
 
     ROOT_PATH + 'js/polyfill/',
     ROOT_PATH + 'js/polyfill/Number.js'
