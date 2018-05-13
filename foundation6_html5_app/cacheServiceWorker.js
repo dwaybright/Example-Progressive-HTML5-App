@@ -1,6 +1,6 @@
 var CACHE_NAME = 'cacheV1';
 
-var ROOT_PATH = '/mdb_html5_app/';
+var ROOT_PATH = '/foundation6_html5_app/';
 
 var CACHE_URLS = [
     ROOT_PATH + 'index.html',

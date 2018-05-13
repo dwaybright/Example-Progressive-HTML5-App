@@ -1,12 +1,10 @@
-$(document).foundation();
-
 $(document).ready(function () {
     if ('Promise' in window &&
         'serviceWorker' in navigator &&
         'caches' in window) {
 
-        navigator.serviceWorker.register('/mdb_html5_app/cacheServiceWorker.js', {
-            scope: '/mdb_html5_app/'
+        navigator.serviceWorker.register('/foundation6_html5_app/cacheServiceWorker.js', {
+            scope: '/foundation6_html5_app/'
         }).then(function (reg) {
             if (reg.installing) {
                 console.debug('Cache Service Worker - Installing');
@@ -56,13 +54,13 @@ function AddObjectToDOM(text) {
 
     var copy = $(hiddenElement).clone();
 
+    $(copy).find('.accordion').foundation();
+    
     $(copy).removeClass("hiddenDivs");
 
     $(copy)[0].id = text.id;
 
     $(copy).find('.deleteButton').on("click", deleteInfoBox);
-
-    $(copy).find('.accordion').foundation();
 
     var firstValueField = $(copy).find('.firstValue');
     $(firstValueField).on("keyup", updateText);
