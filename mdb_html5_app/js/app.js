@@ -3,8 +3,8 @@ $(document).ready(function () {
         'serviceWorker' in navigator &&
         'caches' in window) {
 
-        navigator.serviceWorker.register('/cached_basic_indexedDB/cacheServiceWorker.js', {
-            scope: '/cached_basic_indexedDB/'
+        navigator.serviceWorker.register('/mdb_html5_app/cacheServiceWorker.js', {
+            scope: '/mdb_html5_app/'
         }).then(function (reg) {
             if (reg.installing) {
                 console.debug('Cache Service Worker - Installing');
