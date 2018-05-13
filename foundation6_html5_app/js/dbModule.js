@@ -2,6 +2,7 @@ const DB_NAME = "TestDatabaseName";
 const DB_VERSION = 1;
 const DB_KEYPATH_FIELD = "id";
 const DB_OBJECT_STORE_TEST = "test_object_store";
+const DB_OBJECT_STORE_FILES = "files_object_store";
 
 var database = (function () {
     'use strict';
@@ -36,6 +37,11 @@ var database = (function () {
                     });
                     // Can also give other index
                     //testObjectStore.createIndex("field", "field", { unique:false });
+
+                    var filesObjectStore = thisDB.createObjectStore(DB_OBJECT_STORE_FILES, {
+                        keyPath: DB_KEYPATH_FIELD,
+                        autoIncrement: true
+                    });
 
                 default:
                     break;

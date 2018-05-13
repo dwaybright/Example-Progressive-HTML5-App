@@ -25,6 +25,8 @@ $(document).ready(function () {
     }
 
     // Wire up remaining event handlers
+    $('#fileUpload').on("change", handleFileUpload);
+    
     $('#addButton').on("click", addNewCopyOfHiddenDiv);
 });
 
