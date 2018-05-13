@@ -26,9 +26,6 @@ $(document).ready(function () {
         database.open(databaseReady);
     }
 
-    // Hide hidden DIVs
-    //$('.hiddenDivs').hide();
-
     // Wire up remaining event handlers
     $('#addButton').on("click", addNewCopyOfHiddenDiv);
 });
@@ -63,13 +60,9 @@ function AddObjectToDOM(text) {
 
     $(copy)[0].id = text.id;
 
-    var accordion = $(copy).find('.accordion');
-    $(accordion).accordion({
-        heightStyle: "content",
-        collapsible: true
-    });
-
     $(copy).find('.deleteButton').on("click", deleteInfoBox);
+
+    $(copy).find('.accordion').foundation();
 
     var firstValueField = $(copy).find('.firstValue');
     $(firstValueField).on("keyup", updateText);
