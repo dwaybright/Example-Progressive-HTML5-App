@@ -1,0 +1,183 @@
+<!DOCTYPE html">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.css" rel="stylesheet" />
+
+    <!-- JQuery UI -->
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css" />
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <title>IndexedDB with Cached Service Worker</title>
+</head>
+
+<body>
+    <!--Main Navigation-->
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark primary-color scrolling-navbar">
+
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="#">Material Design Bootstrap 4</a>
+
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Change Language</a>
+                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#" lang="en" hreflang="en">English</a>
+                            <a class="dropdown-item" href="#" lang="de" hreflang="de">Deutch</a>
+                            <a class="dropdown-item" href="#" lang="fr" hreflang="fr">Francais</a>
+                        </div>
+                    </li>
+
+                </ul>
+                <!-- Links -->
+
+                <form class="form-inline">
+                    <div class="md-form my-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    </div>
+                </form>
+            </div>
+            <!-- Collapsible content -->
+
+        </nav>
+        <!--/.Navbar-->
+    </header>
+    <!--Main Navigation-->
+
+
+    <!--Main container-->
+    <div class="container mt-5">
+
+        <!--Grid row-->
+        <div class="row">
+
+            <!--Grid column  MARGIN ???-->
+            <div class="col-md-2"></div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-8">
+
+                <h4>PLACEHOLDER</h4>
+
+                <br/>
+
+                <button id="addButton" type="button" class="btn btn-primary">Add Record</button>
+
+                <br/>
+                <br/>
+
+                <div id="holdingDiv"></div>
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column MARGIN-->
+            <div class="col-md-2"></div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+    </div>
+    <!--Main container-->
+
+
+    <!--Footer-->
+    <footer>
+
+    </footer>
+    <!--Footer-->
+
+    
+    <!-- Scripts -->
+    <!-- Polyfills-->
+    <script type="text/javascript" src="js/polyfill/Number.js"></script>
+    <!-- JQuery && JQuery UI -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.12.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+    <!-- Web app code -->
+    <script type="text/javascript" src="js/dbModule.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+
+    <!--Hidden HTML code-->
+    <div id="hiddenAddMe" class="hiddenDivs entryPanel card card-body">
+
+        <div class="form-group row">
+            <div class="col-sm-4">
+                <button type="button" class="btn btn-warning deleteButton">Delete</button>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="recordValueOutput" class="col-auto col-form-label">Record Value</label>
+            <div class="col-auto">
+                <div class="md-form mt-0">
+                    <span id="recordValueOutput" class="textOutput">Empty</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <h3>Edit</h3>
+            <div>
+                <div>
+                    <label for="recordValue1">Value 1</label>
+                    <input id="recordValue1" class="firstValue" type="text" />
+                </div>
+                <div>
+                    <label for="recordValue2">Value 2</label>
+                    <input id="recordValue2" class="secondValue" type="text" />
+                </div>
+            </div>
+        </div>
+        <br/>
+    </div>
+    <!--Hidden HTML code-->
+</body>
+
+</html>
