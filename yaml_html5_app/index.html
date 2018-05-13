@@ -1,0 +1,129 @@
+<!DOCTYPE html">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/central.css" type="text/css" />
+    <!--[if lte IE 7]><link rel="stylesheet" href="yaml/core/iehacks.css" type="text/css"/><![endif]-->
+
+    <!-- JQuery UI -->
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.min.css" />
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <title>YAML.DE HTML5 App</title>
+</head>
+
+<body>
+    <!--Main Navigation-->
+    <header>
+        <div class="ym-wrapper">
+            <div class="ym-wbox">
+                <h1>YAML HTML5 App</h1>
+            </div>
+        </div>
+    </header>
+    <!--Main Navigation-->
+
+    <!--Navbar-->
+    <nav class="ym-hlist">
+        <div class="ym-wrapper">
+            <div class="ym-hlist">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <strong>Enter Records</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--/.Navbar-->
+
+    <!--Main container-->
+    <main>
+        <div class="ym-wrapper">
+            <div class="ym-wbox">
+                <section class="ym-grid linearize-level-1">
+                    <div class="ym-g80 ym-gl">
+                        <h4>PLACEHOLDER</h4>
+
+                        <br/>
+
+                        <button id="addButton" type="button" class="ym-button ym-primary">Add Record</button>
+
+                        <br/>
+                        <br/>
+
+                        <div id="holdingDiv"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <!--Main container-->
+
+
+    <!--Footer-->
+    <footer>
+        <div class="ym-wrapper">
+            <div class="ym-wbox">
+            </div>
+        </div>
+    </footer>
+    <!--Footer-->
+
+
+    <!-- Scripts -->
+    <!-- Polyfills-->
+    <script type="text/javascript" src="js/polyfill/Number.js"></script>
+    <!--[if lt IE 9]><script src="./lib/html5shiv/html5shiv.js"></script><![endif]-->
+    <!-- JQuery && JQuery UI -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.12.1.min.js"></script>
+
+    <!-- full skip link functionality in webkit browsers -->
+    <script src="../yaml/core/js/yaml-focusfix.js"></script>
+    <!-- Web app code -->
+    <script type="text/javascript" src="js/dbModule.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+
+    <!--Hidden HTML code-->
+    <div id="hiddenAddMe" class="ym-form hiddenDivs entryPanel">
+        <div class="ym-fbox">
+            <button type="button" class="ym-button ym-warning deleteButton">Delete</button>
+        </div>
+
+        <div class="ym-fbox">
+            <label for="recordValueOutput" class="ym-label">Record Value</label>
+            <span id="recordValueOutput" class="textOutput">Empty</span>
+        </div>
+
+        <div class="ym-wrapper">
+            <div class="accordion">
+                <h3>Edit</h3>
+                <div>
+                    <div>
+                        <label for="recordValue1">Value 1</label>
+                        <input id="recordValue1" class="firstValue" type="text" />
+                    </div>
+                    <div>
+                        <label for="recordValue2">Value 2</label>
+                        <input id="recordValue2" class="secondValue" type="text" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Hidden HTML code-->
+</body>
+
+</html>
