@@ -1,3 +1,5 @@
+$(document).foundation();
+
 $(document).ready(function () {
     if ('Promise' in window &&
         'serviceWorker' in navigator &&
