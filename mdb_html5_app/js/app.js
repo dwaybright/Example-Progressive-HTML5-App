@@ -87,7 +87,7 @@ function updateText(event) {
     var target = event.target;
 
     // Find references to all variable fields
-    var container = $(target).closest('.hiddenDivs');
+    var container = $(target).closest('.entryPanel');
     var output = $(container).find('.textOutput');
     var text1 = $(container).find('.firstValue');
     var text2 = $(container).find('.secondValue');
