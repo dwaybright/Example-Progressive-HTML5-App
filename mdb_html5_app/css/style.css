@@ -1,5 +1,9 @@
 /* Your custom styles */
 
+.hiddenDivs {
+    display: none;
+}
+
 .entryPanel {
     border-style: inset;
     border-color: black;

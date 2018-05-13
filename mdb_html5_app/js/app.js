@@ -25,7 +25,7 @@ $(document).ready(function () {
     }
 
     // Hide hidden DIVs
-    $('.hiddenDivs').hide();
+    //$('.hiddenDivs').hide();
 
     // Wire up remaining event handlers
     $('#addButton').on("click", addNewCopyOfHiddenDiv);
@@ -55,7 +55,9 @@ function addSavedCopiesOfHiddenDivs(savedObjects) {
 function AddObjectToDOM(text) {
     var hiddenElement = $('#hiddenAddMe');
 
-    var copy = $(hiddenElement).clone().show();
+    var copy = $(hiddenElement).clone();
+
+    $(copy).removeClass("hiddenDivs");
 
     $(copy)[0].id = text.id;
 
@@ -104,7 +106,7 @@ function updateText(event) {
 }
 
 function deleteInfoBox(event) {
-    var container = $(event.currentTarget).closest('.hiddenDivs');
+    var container = $(event.currentTarget).closest('.entryPanel');
 
     // delete from database
     database.deleteKey(DB_OBJECT_STORE_TEST, $(container)[0].id);
